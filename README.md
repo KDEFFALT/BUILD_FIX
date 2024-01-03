@@ -20,5 +20,6 @@
    ```
    mkdir dist_output
    ```
+   ```
    make dist DIST_DIR=dist_output
    ```
