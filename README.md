@@ -27,4 +27,4 @@
     ```
     make dist
     ```
-    to build zip
+    if zip not builded automatically
