@@ -14,12 +14,12 @@
 
  3. Not building zip file after build succesfull (Android 11)
 
-   ```
-   . build/envsetup.sh && lunch {your_target}
-   ```
-   ```
-   mkdir dist_output
-   ```
-   ```
-   make dist DIST_DIR=dist_output
-   ```
+    ```
+    . build/envsetup.sh && lunch {your_target}
+    ```
+    ```
+    mkdir dist_output
+    ```
+    ```
+    make dist DIST_DIR=dist_output
+    ```
