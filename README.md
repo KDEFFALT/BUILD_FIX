@@ -17,6 +17,7 @@
    ```
    . build/envsetup.sh && lunch {your_target}
    ```
+   ```
    mkdir dist_output
    ```
    make dist DIST_DIR=dist_output
