@@ -23,3 +23,8 @@
     ```
     make dist DIST_DIR=dist_output
     ```
+    then
+    ```
+    make dist
+    ```
+    to build zip
