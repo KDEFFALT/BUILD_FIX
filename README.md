@@ -28,3 +28,13 @@
     make dist
     ```
     if zip not builded automatically
+
+4. cannot find symbol error in xdroid caf 11
+   
+   # clone packages_services_Telecomm from PixelExperience first
+   
+   then
+
+    ```
+     replace RingtoneFactory in packages/services/Telecomm/src/com/android/server/telecom/RingtoneFactory.java with included file inside repo
+    ```
