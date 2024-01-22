@@ -53,3 +53,16 @@ Silence the error in build/core/dex_preopt_config.mk by removing
 $(call pretty-error, DEXPREOPT must be enabled for user and userdebug builds) 
 ```
 build/core/dex_preopt_config.mk
+
+6. fix JVM target error
+   ```
+   error: cannot inline bytecode built with JVM target 11 into bytecode that is being built with JVM target 1.8. Please specify proper '-jvm-target' option
+   ```
+   edit to android/build/soong/java/kotlin.go and find "func kotlinCompile" then change
+   ```
+   "kotlinJvmTarget":   flags.javaVersion.StringForKotlinc(),
+   ```
+   To
+   ```
+   "kotlinJvmTarget": "11",
+   ```
