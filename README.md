@@ -59,7 +59,7 @@
    ```
    error: cannot inline bytecode built with JVM target 11 into bytecode that is being built with JVM target 1.8. Please specify proper '-jvm-target' option
    ```
-   edit to android/build/soong/java/kotlin.go and find "func kotlinCompile" then change
+   edit android/build/soong/java/kotlin.go and find "func kotlinCompile" then change
    ```
    "kotlinJvmTarget":   flags.javaVersion.StringForKotlinc(),
    ```
