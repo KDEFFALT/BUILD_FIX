@@ -67,3 +67,4 @@
    ```
    "kotlinJvmTarget": "11",
    ```
+   see https://github.com/AOSPA/android_build_soong/commit/d96eebf3bc6903971828b5e93cf1143b60d7b0aa for more details
