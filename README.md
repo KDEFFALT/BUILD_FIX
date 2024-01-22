@@ -38,3 +38,18 @@
     ```
      replace RingtoneFactory in packages/services/Telecomm/src/com/android/server/telecom/RingtoneFactory.java with included file inside repo
     ```
+
+5. Dex2Oat failed to compile
+   ```
+   ERROR: Dex2oat failed to compile a boot image.It is likely that the boot classpath is inconsistent.Rebuild with ART_BOOT_IMAGE_EXTRA_ARGS="--runtime-arg -verbose:verifier" to see verification errors.   
+   ```
+So after some digging AOSP code I've came up with this workaround. Note that I don't think its a solution - just a workaround. Basically it figures out that WITH_DEXPREOPT is overriden in build scripts. In my AOSP version it was in build/core/board_config.mk
+
+Workaround:
+
+In build/core/board_config.mk set WITH_DEXPREOPT to false build/core/board_config.mk
+Silence the error in build/core/dex_preopt_config.mk by removing 
+```
+$(call pretty-error, DEXPREOPT must be enabled for user and userdebug builds) 
+```
+build/core/dex_preopt_config.mk
